@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import style from "../allCourses/index.css";
+import style from "../categoryTitle/index.css";
 
-function AllCourses() {
+function CategoryTitle() {
   return (
     <div>
       <h1>hello</h1>
     </div>
   );
 }
-export default AllCourses;
+export default CategoryTitle;

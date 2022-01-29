@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import style from "../dasboard/index.css";
+import style from "../decision/index.css";
 
 function Decision() {
   return (
