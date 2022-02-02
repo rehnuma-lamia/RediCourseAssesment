@@ -5,7 +5,7 @@ export function LandPage() {
     <main>
       <h1>
         Are you interested in taking Web Development Course in Digital Career
-        Program?
+        Program????
       </h1>
       <Button />
     </main>
