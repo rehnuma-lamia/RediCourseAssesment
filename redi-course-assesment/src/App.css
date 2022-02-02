@@ -1,1 +1,32 @@
+.App {
+  margin: 0;
+  padding: 0;
+}
 
+Header img {
+  height: 35px;
+  width: 189px;
+}
+
+main {
+  height: 100%;
+  text-align: center;
+  margin: 13rem 20rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  margin-bottom: 5rem;
+  line-height: 3rem;
+}
+
+button {
+  height: 40px;
+  width: 150px;
+  background-color: #f15a22;
+  border: 0 solid #ffffff;
+  border-radius: 0.75rem;
+  color: #ffffff;
+}
