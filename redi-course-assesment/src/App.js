@@ -1,9 +1,13 @@
-import Dashboard from "./pages/dasboard/dasboard";
+import { Button } from "./components/Button";
+import { Header } from "./components/Header";
+import { LandPage } from "./components/LandPage";
 
 function App() {
   return (
     <div>
-      <Dashboard />
+      <Header />
+      <LandPage />
+      <Button />
     </div>
   );
 }
