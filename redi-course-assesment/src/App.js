@@ -1,11 +1,11 @@
 import { Header } from "./components/Header";
-import { LandPage } from "./components/LandPage";
+import { DashboardPage } from "./pages/DashboardPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <LandPage />
+      <DashboardPage />
     </div>
   );
 }

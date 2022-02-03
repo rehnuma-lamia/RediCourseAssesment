@@ -1,6 +1,7 @@
-import { Button } from "./Button";
+import { useState, useEffect } from "react";
+import { Button } from "../components/Button";
 
-export function LandPage() {
+export function DashboardPage() {
   return (
     <main>
       <h1>
@@ -11,3 +12,5 @@ export function LandPage() {
     </main>
   );
 }
+
+//export default DashboardPage;
