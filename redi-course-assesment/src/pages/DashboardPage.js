@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "../components/Button";
 
-export function DashboardPage() {
+function DashboardPage() {
   return (
     <main>
       <h1>
@@ -13,4 +13,4 @@ export function DashboardPage() {
   );
 }
 
-//export default DashboardPage;
+export default DashboardPage;
