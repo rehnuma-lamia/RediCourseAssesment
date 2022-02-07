@@ -1,5 +1,7 @@
-import { Header } from "./components/Header";
 import { Routes, Route } from "react-router-dom";
+
+// components
+import Header from "./components/Header/index";
 
 // PAGES
 import DashboardPage from "./pages/DashboardPage";
