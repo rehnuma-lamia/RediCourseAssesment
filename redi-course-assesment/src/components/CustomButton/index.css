@@ -1,0 +1,18 @@
+.buttonPrimary {
+  padding: 1em;
+  background-color: #f15a22;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  min-width: 150px;
+  border-color: transparent !important; /* Override the main button CSS */
+}
+
+.buttonSecondary {
+  padding: 1em;
+  background-color: #ffffff;
+  color: #f15a22;
+  border-radius: 0.75rem;
+  min-width: 150px;
+  border-color: #f15a22 !important;
+  border: solid;
+}
