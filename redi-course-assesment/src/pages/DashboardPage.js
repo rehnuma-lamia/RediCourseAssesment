@@ -12,15 +12,16 @@ function DashboardPage() {
   );
 
   return (
-    <main>
+    <main className="dashboard-page">
       <h1>
         Are you interested in taking Web Development Course in Digital Career
         Program?
       </h1>
       <CustomButton
+        className="dash-button"
         onClick={handleOnClick}
         title="Go To Assesment"
-        isPrimary={false}
+        isPrimary={true}
       />
     </main>
   );

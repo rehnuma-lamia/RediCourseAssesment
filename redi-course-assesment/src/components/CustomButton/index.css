@@ -1,4 +1,5 @@
 .buttonPrimary {
+  font-family: avenir-lt-pro;
   padding: 1em;
   background-color: #f15a22;
   border-radius: 0.75rem;
@@ -8,6 +9,7 @@
 }
 
 .buttonSecondary {
+  font-family: avenir-lt-pro;
   padding: 1em;
   background-color: #ffffff;
   color: #f15a22;
