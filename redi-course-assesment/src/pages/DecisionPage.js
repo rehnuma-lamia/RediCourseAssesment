@@ -1,7 +1,18 @@
 import React, { useCallback } from "react";
-//import { useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import CustomButton from "../components/CustomButton";
 function DecisionPage() {
+  const navigate = useNavigate();
+
+  const saveButtonClick = useCallback(
+    () => navigate("/questions", { replace: false }),
+    [navigate]
+  );
+  const cancelButtonClick = useCallback(
+    () => navigate("/questions", { replace: false }),
+    [navigate]
+  );
+
   return (
     <main>
       <h1>
@@ -9,12 +20,16 @@ function DecisionPage() {
         JavaScript
       </h1>
       <div class="buttons">
-        <button class="button" onclick="myFunction()">
-          Save
-        </button>
-        <button class="button" onclick="myFunction2()">
-          Cancel
-        </button>
+        <CustomButton
+          onClick={saveButtonClick}
+          title="Save"
+          isPrimary={true}
+        />
+        <CustomButton
+          onClick={cancelButtonClick}
+          title="Cancel"
+          isPrimary={true}
+        />
       </div>
     </main>
   );

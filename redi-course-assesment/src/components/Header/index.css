@@ -1,4 +1,21 @@
-Header img {
-    height: 35px;
-    width: 189px;
-  }
+.img {
+  height: 35px;
+  width: 189px;
+}
+.navDesign {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonTop {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background-color: #f15a22;
+  padding: 10px;
+  color: white;
+  border-color: transparent !important; /* Override the main button CSS */
+  border-radius: 20px;
+  min-width: 80px;
+}
