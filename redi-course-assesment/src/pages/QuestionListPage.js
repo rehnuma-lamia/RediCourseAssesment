@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { QUESTIONS } from "../const/const";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { LinearWithValueLabel } from "../components/Progressbar";
 
 function QuestionListPage() {
   let navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const beforeLastQuestion = currentIndex < QUESTIONS.length - 1;
 
   function handleBackClick() {
     currentIndex !== 0 ? setCurrentIndex(currentIndex - 1) : navigate(-1);
@@ -36,24 +38,24 @@ function QuestionListPage() {
           <div className="answer-box correct-answer" onClick={addScore}>
             {QUESTIONS[currentIndex].correctAnswer}
           </div>
-          {QUESTIONS[0].wrongAnswers.map((an, i) => (
+          {QUESTIONS[currentIndex].wrongAnswers.map((answer, i) => (
             <div className="answer-box wrong-answers" key={i}>
-              {an}
+              {answer}
             </div>
           ))}
         </div>
       </div>
+      <LinearWithValueLabel index={currentIndex} />
       <div className="question-page-buttons">
-        <button onClick={handleBackClick}>
+        <button className="arrow-button" onClick={handleBackClick}>
           <ArrowBackIosIcon />
           Back
         </button>
         <button
-          onClick={
-            currentIndex < QUESTIONS.length - 1 ? handleNextClick : onSubmit
-          }
+          className="arrow-button"
+          onClick={beforeLastQuestion ? handleNextClick : onSubmit}
         >
-          {currentIndex < QUESTIONS.length - 1 ? "Next" : "Submit"}
+          {beforeLastQuestion ? "Next" : "Submit"}
           <ArrowForwardIosIcon />
         </button>
       </div>
@@ -65,6 +67,7 @@ export default QuestionListPage;
 
 // [] I want to display answers order randomly.
 // [] If the user clicks the correct answer, answer box outline should be green , If wrong answers, It should be red.
+// [] setting progress par
 // [V] If currentIndex  === question.length -1, button text changes 'Submit' from 'Next'
 // [V] If you click the 'Submit', display DecisionPage
 
