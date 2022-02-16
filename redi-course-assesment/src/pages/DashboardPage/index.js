@@ -1,12 +1,13 @@
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import "./index.css";
 
 // Component
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 
 function DashboardPage() {
   const navigate = useNavigate();
-  const handleOnClick = useCallback(
+  const navigateToQuestionPage = useCallback(
     () => navigate("/questions", { replace: false }),
     [navigate]
   );
@@ -18,10 +19,9 @@ function DashboardPage() {
         Program?
       </h1>
       <CustomButton
-        className="dash-button"
-        onClick={handleOnClick}
+        onClick={navigateToQuestionPage}
         title="Go To Assesment"
-        isPrimary={true}
+        isPrimary={false}
       />
     </main>
   );

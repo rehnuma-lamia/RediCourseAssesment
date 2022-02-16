@@ -1,0 +1,11 @@
+.aboutTopImage {
+  height: 300px;
+  width: 500px;
+}
+
+.aboutPageDesign {
+  background-color: rgba(184, 179, 179, 0.582);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+}
