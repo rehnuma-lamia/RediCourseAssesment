@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { QUESTIONS } from "../const/const";
+import { QUESTIONS } from "../../const/const";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { LinearWithValueLabel } from "../components/Progressbar";
+import { LinearWithValueLabel } from "../../components/ProgressBar";
+import "./index.css"
 
 function QuestionListPage() {
   let navigate = useNavigate();
@@ -18,6 +19,7 @@ function QuestionListPage() {
   function handleNextClick() {
     setCurrentIndex(currentIndex + 1);
   }
+
   function onSubmit() {
     console.log("submitted");
     navigate("/decision");

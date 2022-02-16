@@ -1,0 +1,44 @@
+/* QuestionPage */
+
+.question-page {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.question-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* border: solid; */
+  padding: 1.5rem;
+}
+
+.answer-boxes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-box {
+  border: solid 1px;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 50rem;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.question-page-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.arrow-button {
+  background-color: white;
+  border: 0;
+  color: #f15a22;
+  font-size: 20px;
+}

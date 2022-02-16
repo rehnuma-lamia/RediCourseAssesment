@@ -7,6 +7,7 @@ import Header from "./components/Header/index";
 import DashboardPage from "./pages/DashboardPage";
 import DecisionPage from "./pages/DecisionPage";
 import QuestionListPage from "./pages/QuestionListPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<DashboardPage />} />
         <Route path="/decision" element={<DecisionPage />} />
         <Route path="/questions" element={<QuestionListPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </div>
   );
