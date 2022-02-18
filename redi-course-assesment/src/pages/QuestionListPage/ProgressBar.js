@@ -54,9 +54,11 @@ export function ProgressBar({ currentIndex }) {
   const [progress, setProgress] = useState(currentIndex);
 
   useEffect(() => {
-    setProgress((prevProgress) =>
-      prevProgress <= progress ? prevProgress + 20 : prevProgress - 20
-    );
+    setProgress((prevProgress) => {
+      if (prevProgress <= 100) {
+        return prevProgress <= progress ? prevProgress + 20 : prevProgress - 20;
+      }
+    });
   }, [currentIndex]);
 
   return (

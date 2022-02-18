@@ -1,9 +1,11 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useContext } from "react";
+import AppContext from "../../AppContext";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/CustomButton";
 import "./index.css";
 
 function DecisionPage() {
+  const { allQuestions, score } = useContext(AppContext);
   const navigate = useNavigate();
 
   const courseDetailButtonClick = useCallback(
@@ -21,10 +23,10 @@ function DecisionPage() {
   return (
     <main className="dashboard-page">
       <h1>
-        You have 10 correct answers in 20 Questions. Recommended course:
-        JavaScript
+        You have {score} correct answers in {allQuestions.length} Questions.
+        Recommended course: JavaScript
       </h1>
-      <div class="buttons">
+      <div className="buttons">
         <CustomButton
           onClick={courseDetailButtonClick}
           title="Course Details"

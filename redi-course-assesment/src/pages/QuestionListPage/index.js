@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { QUESTIONS } from "../../const/const";
+import React, { useState, useContext } from "react";
+import AppContext from "../../AppContext";
 import { Question } from "./Question";
 import { Answers } from "./Answers";
 import { ArrowButtons } from "./PageButtons";
@@ -7,10 +7,9 @@ import "./index.css";
 import { ProgressBar } from "./ProgressBar";
 
 function QuestionListPage() {
-  const allQuestions = QUESTIONS;
+  const { allQuestions, score, setScore } = useContext(AppContext);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const beforeLastQuestion = currentIndex < QUESTIONS.length - 1;
+  const beforeLastQuestion = currentIndex < allQuestions.length - 1;
 
   return (
     <main className="question-page">
