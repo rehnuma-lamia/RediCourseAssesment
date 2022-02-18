@@ -1,78 +1,35 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { QUESTIONS } from "../../const/const";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { LinearWithValueLabel } from "../../components/ProgressBar";
-import "./index.css"
+import React, { useState, useContext } from "react";
+import AppContext from "../../AppContext";
+import { Question } from "./Question";
+import { Answers } from "./Answers";
+import { ArrowButtons } from "./PageButtons";
+import "./index.css";
+import { ProgressBar } from "./ProgressBar";
 
 function QuestionListPage() {
-  let navigate = useNavigate();
+  const { allQuestions, score, setScore } = useContext(AppContext);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const beforeLastQuestion = currentIndex < QUESTIONS.length - 1;
-
-  function handleBackClick() {
-    currentIndex !== 0 ? setCurrentIndex(currentIndex - 1) : navigate(-1);
-  }
-
-  function handleNextClick() {
-    setCurrentIndex(currentIndex + 1);
-  }
-
-  function onSubmit() {
-    console.log("submitted");
-    navigate("/decision");
-  }
-
-  function addScore() {
-    console.log("add scored");
-    setScore(score + 1);
-  }
+  const beforeLastQuestion = currentIndex < allQuestions.length - 1;
 
   return (
     <main className="question-page">
       <div className="question-box">
-        <h1>
-          Q{currentIndex + 1}. {QUESTIONS[currentIndex].question}
-        </h1>
-        <div className="answer-boxes">
-          <div className="answer-box correct-answer" onClick={addScore}>
-            {QUESTIONS[currentIndex].correctAnswer}
-          </div>
-          {QUESTIONS[currentIndex].wrongAnswers.map((answer, i) => (
-            <div className="answer-box wrong-answers" key={i}>
-              {answer}
-            </div>
-          ))}
-        </div>
+        <Question currentIndex={currentIndex} allQuestions={allQuestions} />
+        <Answers
+          allQuestions={allQuestions}
+          currentIndex={currentIndex}
+          score={score}
+          setScore={setScore}
+        />
       </div>
-      <LinearWithValueLabel index={currentIndex} />
-      <div className="question-page-buttons">
-        <button className="arrow-button" onClick={handleBackClick}>
-          <ArrowBackIosIcon />
-          Back
-        </button>
-        <button
-          className="arrow-button"
-          onClick={beforeLastQuestion ? handleNextClick : onSubmit}
-        >
-          {beforeLastQuestion ? "Next" : "Submit"}
-          <ArrowForwardIosIcon />
-        </button>
-      </div>
+      <ProgressBar currentIndex={currentIndex} allQuesetions={allQuestions} />
+      <ArrowButtons
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        beforeLastQuestion={beforeLastQuestion}
+      />
     </main>
   );
 }
 
 export default QuestionListPage;
-
-// [] I want to display answers order randomly.
-// [] If the user clicks the correct answer, answer box outline should be green , If wrong answers, It should be red.
-// [] setting progress par
-// [V] If currentIndex  === question.length -1, button text changes 'Submit' from 'Next'
-// [V] If you click the 'Submit', display DecisionPage
-
-// MY Qestions
-// should I use 'useEffect' to fetch QESTIONS object?
-// Is it vaild in this case? (very small object..)
