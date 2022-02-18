@@ -23,7 +23,7 @@ function QuestionListPage() {
           setScore={setScore}
         />
       </div>
-      <ProgressBar currentIndex={currentIndex} />
+      <ProgressBar currentIndex={currentIndex} allQuesetions={allQuestions} />
       <ArrowButtons
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
