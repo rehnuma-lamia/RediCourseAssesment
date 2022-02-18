@@ -6,17 +6,19 @@ import "./index.css";
 function DecisionPage() {
   const navigate = useNavigate();
 
-  const courseDetailButtonClick = useCallback(
-    () =>
-      navigate("https://de.redi-school.org/digital-career-program-berlin", {
-        replace: false,
-      }),
-    [navigate]
-  );
-  const applyCourseButtonClick = useCallback(
-    () => navigate("/", { replace: false }),
-    [navigate]
-  );
+  function applyCourseButtonClick() {
+    window.open(
+      "https://de.redi-school.org/digital-career-program-berlin",
+      "_blank"
+    );
+  }
+
+  function courseDetailButtonClick() {
+    window.open(
+      "https://de.redi-school.org/digital-career-program-berlin",
+      "_blank"
+    );
+  }
 
   return (
     <main className="dashboard-page">
