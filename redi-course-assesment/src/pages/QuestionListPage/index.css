@@ -30,6 +30,14 @@
   margin-bottom: 0.5rem;
 }
 
+.correct-answer {
+  border: solid 3px blue;
+}
+
+.wrong-answers {
+  border: solid 3px, red;
+}
+
 .question-page-buttons {
   display: flex;
   justify-content: space-around;
