@@ -8,13 +8,12 @@ function DecisionPage() {
   const { allQuestions, score } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const courseDetailButtonClick = useCallback(
-    () =>
-      navigate("https://de.redi-school.org/digital-career-program-berlin", {
-        replace: false,
-      }),
-    [navigate]
-  );
+  const courseDetailButtonClick = (e) => {
+    // e.preventDefault();
+    window.location.href =
+      "https://de.redi-school.org/digital-career-program-berlin";
+  };
+
   const applyCourseButtonClick = useCallback(
     () => navigate("/", { replace: false }),
     [navigate]
