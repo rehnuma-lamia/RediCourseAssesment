@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import "./index.css"
+import "./index.css";
 
-export function LinearWithValueLabel({ index }) {
-  const [progress, setProgress] = useState({ index });
+export function ProgressBar({ currentIndex }) {
+  const [progress, setProgress] = useState();
 
   useEffect(() => {
     // console.log(progress);

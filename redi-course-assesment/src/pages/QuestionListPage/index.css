@@ -37,8 +37,10 @@
 }
 
 .arrow-button {
+  display: flex;
+  align-items: center;
   background-color: white;
   border: 0;
   color: #f15a22;
-  font-size: 20px;
+  font-size: 18px;
 }
