@@ -1,3 +1,7 @@
+button {
+  margin: 10px;
+}
+
 .buttonPrimary {
   font-family: avenir-lt-pro;
   padding: 1em;
