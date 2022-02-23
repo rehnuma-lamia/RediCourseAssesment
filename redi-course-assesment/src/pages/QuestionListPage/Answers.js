@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 export function Answers({ allQuestions, currentIndex, score, setScore }) {
   const [isWrongClicked, setIsWrongClicked] = useState(false);
   const [isCorrectClicked, setIsCorrectClicked] = useState(false);
-  const id = uuidv4();
 
   function addScore() {
     console.log("add scored");
@@ -13,9 +12,9 @@ export function Answers({ allQuestions, currentIndex, score, setScore }) {
     setIsCorrectClicked(true);
   }
 
-  function wrongClick(id, e) {
-    console.log(e.target.id, id);
-    e.target.id === id && setIsWrongClicked(true);
+  function wrongClick(e) {
+    console.log(e.target.id);
+    setIsWrongClicked(true);
     console.log("wrong answer clicked", isWrongClicked);
   }
 
@@ -40,8 +39,8 @@ export function Answers({ allQuestions, currentIndex, score, setScore }) {
           className={classNames(
             `answer-box ${isWrongClicked && "wrong-answers"}`
           )}
-          onClick={wrongClick.bind(this, id)}
-          id={id}
+          onClick={wrongClick}
+          id={uuidv4()}
           key={i}
         >
           {answer}
