@@ -1,15 +1,18 @@
-
 .dashboard-page {
-    height: 100%;
-    text-align: center;
-    margin: 13rem 20rem;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .dashboard-page h1 {
-    margin-bottom: 5rem;
-    line-height: 3rem;
-  }
-  
+  height: 100%;
+  text-align: center;
+  margin: 13rem 20rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-page h1 {
+  margin-bottom: 5rem;
+  line-height: 3rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
