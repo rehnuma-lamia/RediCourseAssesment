@@ -15,10 +15,13 @@ export function Answers({ allQuestions, currentIndex, score, setScore }) {
   function wrongClick(e) {
     console.log(e.target.id);
     setIsWrongClicked(true);
+<<<<<<< HEAD
     isWrongClicked
       ? e.target.classList.add("wrong-answers")
       : e.target.classList.remove("wrong-answers");
     // e.target.id === this.id && setIsWrongClicked(true);
+=======
+>>>>>>> master
     console.log("wrong answer clicked", isWrongClicked);
   }
 
@@ -42,7 +45,13 @@ export function Answers({ allQuestions, currentIndex, score, setScore }) {
       </div>
       {allQuestions[currentIndex].wrongAnswers.map((answer, i) => (
         <div
+<<<<<<< HEAD
           className={classNames(`answer-box ${isCorrectClicked && "clicked"}`)}
+=======
+          className={classNames(
+            `answer-box ${isWrongClicked && "wrong-answers"}`
+          )}
+>>>>>>> master
           onClick={wrongClick}
           id={uuidv4()}
           key={i}

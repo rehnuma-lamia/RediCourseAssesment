@@ -50,16 +50,16 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export function ProgressBar({ currentIndex }) {
+export function ProgressBar({ currentIndex, allQuestions }) {
   const [progress, setProgress] = useState(currentIndex);
 
   useEffect(() => {
     setProgress((prevProgress) => {
       if (progress <= 100) {
         console.log(prevProgress, currentIndex);
-        return prevProgress <= currentIndex * 20
-          ? prevProgress + 20
-          : prevProgress - 20;
+        return prevProgress <= currentIndex * (100 / allQuestions.length)
+          ? prevProgress + 100 / allQuestions.length
+          : prevProgress - 100 / allQuestions.length;
       }
     });
   }, [currentIndex]);
