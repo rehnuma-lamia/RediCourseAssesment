@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import AppContext from "../../AppContext";
 import PropTypes from "prop-types";
 import LinearProgress, {
   linearProgressClasses,
@@ -50,7 +51,8 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export function ProgressBar({ currentIndex, allQuestions }) {
+export function ProgressBar() {
+  const { allQuestions, currentIndex } = useContext(AppContext);
   const [progress, setProgress] = useState(currentIndex);
 
   useEffect(() => {
