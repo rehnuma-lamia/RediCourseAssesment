@@ -5,19 +5,20 @@ import redi from "../../images/redi.jpeg";
 import "./index.css";
 
 function AboutPage() {
-  let items = ["ishtiak", "lamia", "Zavian", "nnm", "ooo"]
+  let items = ["ishtiak", "lamia", "Zavian", "nnm", "ooo"];
   return (
     <div>
       <img className="aboutTopImage" alt="redi" src={redi} />
       <h1>About ReDI Course Assesment </h1>
 
-      {
-        <div>
-          {items.map((value) => (
-            <div>{value}</div>
-          ))}
-        </div>
-      }
+      <div>
+        {items.map((value, index) => (
+          <div>
+            {index + 1}. {value}
+          </div>
+        ))}
+      </div>
+
       <div className="aboutPageDesign">
         <h3>You can do self Assesment test for Web development courses</h3>
         <p>
