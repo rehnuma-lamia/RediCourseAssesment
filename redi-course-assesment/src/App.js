@@ -13,10 +13,13 @@ import AboutPage from "./pages/AboutPage";
 function App() {
   const allQuestions = QUESTIONS;
   const [score, setScore] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const contextValues = {
     score,
     setScore,
     allQuestions,
+    currentIndex,
+    setCurrentIndex,
   };
   return (
     <div className="App">
