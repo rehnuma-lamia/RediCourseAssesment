@@ -25,7 +25,7 @@ export const QUESTIONS = [
     wrongAnswers: ["<ul></ul>", "<p></p>", "<h3></h3>"],
   },
   {
-    question: "What is DOM in JavaScript",
+    question: "What is DOM in JavaScript?",
     correctAnswer:
       "Programming interface that allows us to create, change, or remove elements from the document",
     wrongAnswers: [
@@ -35,7 +35,7 @@ export const QUESTIONS = [
     ],
   },
   {
-    question: "What is the funtion syntax",
+    question: "What is the function syntax?",
     correctAnswer: "function myFunction(p1, p2){return p1 * p2;}",
     wrongAnswers: [
       "func myFunction(p1, p2){return p1 * p2;} ",
