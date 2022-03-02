@@ -22,9 +22,11 @@
 }
 
 .answer-box {
+  background-color: white;
   border: solid 1px;
   border-radius: 0.5rem;
-  height: 3rem;
+  height: 4rem;
+  font-size: 1em;
   width: 50rem;
   padding: 0.8rem;
   margin-bottom: 0.5rem;

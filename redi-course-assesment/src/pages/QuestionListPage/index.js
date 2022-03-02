@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AppContext from "../../AppContext";
 import { Question } from "./Question";
 import { Answer } from "./Answer";
@@ -17,6 +17,26 @@ function QuestionListPage() {
   ];
   //array of objects including string(answer), boolean(correct or not)
   //shuffle answers
+
+  const shuffleAnswers = (array) => {
+    let m = array.length,
+      t,
+      i;
+    while (m) {
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+    return array;
+  };
+
+  useEffect(() => {
+    shuffleAnswers(allAnswers);
+  }, [currentIndex]);
+
   return (
     <main className="question-page">
       <div className="question-box">

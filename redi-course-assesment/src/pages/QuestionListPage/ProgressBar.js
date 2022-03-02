@@ -58,7 +58,7 @@ export function ProgressBar() {
   useEffect(() => {
     setProgress((prevProgress) => {
       if (progress <= 100) {
-        console.log(prevProgress, currentIndex);
+        // console.log(prevProgress, currentIndex);
         return prevProgress <= currentIndex * (100 / allQuestions.length)
           ? prevProgress + 100 / allQuestions.length
           : prevProgress - 100 / allQuestions.length;
