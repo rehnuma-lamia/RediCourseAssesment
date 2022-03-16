@@ -19,11 +19,21 @@ function DecisionPage() {
     [navigate]
   );
 
+  function courseTitleBy(score) {
+    if (score > 3 && score < 6) {
+      return "Frontend Development";
+    } else if (score > 6) {
+      return "React";
+    } else {
+      return "Introduction to computer science";
+    }
+  }
+
   return (
     <main className="dashboard-page">
       <h1>
         You have {score} correct answers in {allQuestions.length} Questions.
-        Recommended course: JavaScript
+        Recommended course: {courseTitleBy(score)}
       </h1>
       <div className="buttons">
         <CustomButton
