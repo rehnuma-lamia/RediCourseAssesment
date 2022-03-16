@@ -13,3 +13,5 @@
 
 1. Mentor: Team members meet with the mentor for any help once in a week.
 2. Team: Team members meet with each other as much as they need.
+
+![alt demo](https://github.com/rehnuma-lamia/RediCourseAssesment/blob/master/ReadMeImage/image.png)
